@@ -56,7 +56,6 @@ void init_wifi() {
 
 //Init sensors
 void init_sensors() {
-  //Serial.begin (9600);
   //Set the printer of the queue
   timer = millis();
   fd = millis();
@@ -126,25 +125,25 @@ void count() {
   int tempsFD = 1000;
   if(fd == 0 or fd+tempsFD < millis()) {    
       if(distance0 < 50) {        
-        Serial.println("sensor 0: ");
-        Serial.println(distance0);
+        //Serial.println("sensor 0: ");
+        //Serial.println(distance0);
             
         if(detecta1 and !detecta0) {          
-          Serial.println("people in the room: ");
-          Serial.println(counter); 
+          //Serial.println("people in the room: ");
+          //Serial.println(counter); 
           counter++;          
         }         
         detecta0 = true;
         
       }
       else if(distance1 < 50) {        
-        Serial.print("sensor 1:");
-        Serial.println(distance1);
+        //Serial.print("sensor 1:");
+        //Serial.println(distance1);
         
         if(detecta0 and !detecta1) {          
           counter--;
-          Serial.print("people in the room:");
-          Serial.println(counter);
+          //Serial.print("people in the room:");
+          //Serial.println(counter);
           
         }    
         detecta1 = true;    
